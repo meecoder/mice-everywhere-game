@@ -1,0 +1,76 @@
+.title {
+    font-family: 'Droid Sans', sans-serif;
+    text-align: center;
+    background-color: rgba(211,211,211,0.7);
+    max-width: 100%;
+    border-bottom: 2px solid darkgray;
+    padding-bottom: 15px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#givemouse,
+#buildhouse{
+    background-color: lightblue;
+    border-radius: 15%;
+    border: 2px solid darkblue;
+    margin: auto;
+    display: inline;
+}
+
+#myMice,
+#myHouses {
+    background-color: rgba(211,211,211,0.3);
+    text-align: center;
+    padding: 5px;
+    clear: both;
+    margin: auto;
+    margin-top: 0em;
+}
+
+.buttonmousegivdiv,
+.buttonhousegivdiv {
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    width: 99%;
+    padding: 0;
+    padding-bottom: 5px;
+}
+
+.desc-text {
+    text-align: center;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.creditslink {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 0.7em;
+    padding-left: 5px;
+    color: black;
+    clear: both;
+    float: left;
+    text-decoration: none;
+    font-style: italic;
+}
+
+body {
+    background: linear-gradient(180deg, purple, rgba(255,255,255,0)), url(mouse.jpg);
+    background-repeat: no-repeat;
+    margin: 0;
+    background-attachment: fixed;
+}
+
+.credits {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 1.25em;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
