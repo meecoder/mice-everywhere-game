@@ -1,5 +1,5 @@
-var mice = 0;
-var houses = 0;
+var mice = 2;
+var houses = 1;
 var i = null;
 var houseBuild = null;
 var MICE_PER_HOUSE = 8;
@@ -41,7 +41,7 @@ function giveMouse() {
             document.getElementById("mouseNum").innerHTML = mice;
         }
     } else {
-        alert("Not enough housing!")
+        alert("Not enough housing!");
     }
 }
 
@@ -57,7 +57,7 @@ function doBuildHouse() {
     }
     document.getElementById("housePlural").innerHTML = houseText;
     document.getElementById("houseNum").innerHTML = houses;
-    setTimeout('document.getElementById("timerHouseFull").innerHTML = ""', 200);
+    setTimeout('document.getElementById("timerHouseFull").innerHTML = ""', 400);
     building = false;
     //alert("innerHTML = " + document.getElementById("timerHouseFull").innerHTML);
 }
@@ -65,13 +65,17 @@ function doBuildHouse() {
 function buildHouse() {
     "use strict";
     if (building === false) {
-        displayTime(10);
-        setTimeout(doBuildHouse, 10000);
+        if ((mice / 8) === houses) {
+            displayTime(10);
+            setTimeout(doBuildHouse, 10000);
+        } else {
+            alert("Not all your houses are full yet!");
+        }
     } else {
-        alert("House already building!")
+            alert("House still building!");
     }
 }
-/* TODO: Displays remaining time */
+/* Displays remaining time */
 function displayTime(time) {
     "use strict";
     timer(time);

@@ -21,6 +21,7 @@ body {
     border: 2px solid darkblue;
     margin: auto;
     display: inline;
+    -webkit-appearance: none;
 }
 
 #myMice,
