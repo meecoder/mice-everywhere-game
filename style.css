@@ -12,6 +12,10 @@
 body {
     margin: 0;
     padding: 0;
+    background: linear-gradient(180deg, purple, rgba(255,255,255,0)), url(mouse.jpg);
+    background-repeat: no-repeat;
+    margin: 0;
+    background-attachment: fixed;
 }
 
 #givemouse,
@@ -62,16 +66,10 @@ body {
     font-style: italic;
 }
 
-body {
-    background: linear-gradient(180deg, purple, rgba(255,255,255,0)), url(mouse.jpg);
-    background-repeat: no-repeat;
-    margin: 0;
-    background-attachment: fixed;
-}
-
 .credits {
     font-family: 'Droid Sans', sans-serif;
     font-size: 1.25em;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 5px;
+}
