@@ -27,6 +27,7 @@ body {
     margin: auto;
     display: inline;
     padding: 10px;
+    border: 0;
     -webkit-appearance: none;
 }
 
@@ -47,6 +48,7 @@ body {
     text-align: center;
     width: 99%;
     padding: 0;
+    border: 0;
     padding-bottom: 5px;
 }
 
