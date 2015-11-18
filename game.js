@@ -65,12 +65,8 @@ function doBuildHouse() {
 function buildHouse() {
     "use strict";
     if (building === false) {
-        if ((mice / 8) === houses) {
-            displayTime(10);
-            setTimeout(doBuildHouse, 10000);
-        } else {
-            alert("Not all your houses are full yet!");
-        }
+        displayTime(10);
+        setTimeout(doBuildHouse, 10000);
     } else {
             alert("House still building!");
     }
