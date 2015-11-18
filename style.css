@@ -21,9 +21,9 @@ body {
 
 #givemouse,
 #buildhouse{
-    background-color: lightblue;
+    background-color: #80deea;
     border-radius: 30px;
-    border: 2px solid black;
+    box-shadow: 2px 2px 5px 1px;
     margin: auto;
     display: inline;
     padding: 10px;
