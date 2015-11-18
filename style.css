@@ -16,6 +16,7 @@ body {
     background-repeat: no-repeat;
     margin: 0;
     background-attachment: fixed;
+    font-family: sans-serif;
 }
 
 #givemouse,
