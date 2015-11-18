@@ -23,7 +23,7 @@ body {
 #buildhouse{
     background-color: #80deea;
     border-radius: 30px;
-    box-shadow: 2px 2px 5px 1px;
+    box-shadow: 2px 2px 5px 1px #80deea;
     margin: auto;
     display: inline;
     padding: 10px;
