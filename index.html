@@ -1,34 +1,25 @@
 <html>
 <head>
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
-    
-<link rel="stylesheet" href="style.css">
-    
-<title>Mice Everywhere</title>
-    
+    <link rel="stylesheet" href="style.css">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <title>Mice Everywhere</title>   
 </head>
-    
 <body>
-    <h1 class="title">Mice Everywhere <small>aka mouses in houses</small></h1>
-    
+    <h1 class="title">Mice Everywhere <small>aka mouses in houses</small></h1>  
     <br/>
-    
+    <h2 id="errorizer"></h2>
     <div class="buttonmousegivdiv" align="center"><input type="button" align="center" id="givemouse" value="Get a mouse" onclick="giveMouse()"></div>
-    
     <div class="buttonhousegivdiv" align="center"><input type="button" align="center" id="buildhouse" value="Build a house" onclick="buildHouse()"></div>
     <br/>
     <p class="desc-text" id="timerHouseFull">&nbsp;</p>
     <p class="desc-text">Houses hold 8 mice. You need 8 mice to build a house.</p>
     <p class="desc-text">It takes 10 seconds to build a house.</p>
     <br/>
-    
     <p id="myMice">You have <strong id="mouseNum">2</strong> <span id="miceOrMouse">mice</span>.</p>
-    
     <p id="myHouses">You have <strong id="houseNum">1</strong> <span id="housePlural">house</span>.</p>
-    
     <script language="javascript" src="game.js"></script>
     <br/>
-    <a class="creditslink" href="credits.html">Credits (this WILL reset your game)</a>
-
+    <a class="creditslink" href="credits.html" target="_blank">Credits</a>
 </body>
 </html>
