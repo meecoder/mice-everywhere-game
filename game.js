@@ -6,6 +6,25 @@ var MICE_PER_HOUSE = 8;
 var building = false;
 $(document).ready(function(){
     $('#errorizer').fadeOut();
+    if($.cookie('mice')) {
+        mice = $.cookie('mice') * 1;
+        houses = $.cookie('houses') * 1;
+    }
+    if (mice === 1) {
+        $("#miceOrMouse").html("mouse");
+        $("#mouseNum").html(mice);
+    } else {
+        $("#miceOrMouse").html("mice");
+        $("#mouseNum").html(mice);
+    }
+    var houseText = "";
+    if (houses === 1) {
+        houseText = "house";
+    } else {
+        houseText = "houses";
+    }
+    $("#housePlural").html(houseText);
+    $("#houseNum").html(houses);
 });
 function alertit(text) {
     $('#errorizer').fadeIn();
@@ -83,3 +102,8 @@ function displayTime(time) {
     "use strict";
     timer(time);
 }
+function saveState(){
+    $.cookie('mice', mice);
+    $.cookie('houses', houses);
+}
+setInterval(saveState, 1000);
