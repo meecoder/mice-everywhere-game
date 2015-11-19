@@ -4,29 +4,37 @@ var i = null;
 var houseBuild = null;
 var MICE_PER_HOUSE = 8;
 var building = false;
-
-
+$(document).ready(function(){
+    $('#errorizer').fadeOut();
+});
+function alertit(text) {
+    $('#errorizer').fadeIn();
+    $('#errorizer').html(text);
+    setTimeout(function(){
+        $('#errorizer').fadeOut();
+    }, 2000);
+}
 /* Timer script - credit to Vishal Chitnis */
 function timer(t){
     building = true;
-  var time = new Date();
-  Date.prototype.toShortString = function(){
-  	var x = this.getSeconds();
-    return "Wait " + x + " seconds.";
-  };
-  time.countDown = function(){
-    var z = this.getSeconds();
-    var a = 0; 
-    if(z == 0){
-      return;
-    } 
-      a = z-1;
-    this.setSeconds(a);
-    document.getElementById('timerHouseFull').innerHTML = (time.toShortString());
+    var time = new Date();
+    Date.prototype.toShortString = function(){
+        var x = this.getSeconds();
+        return "Wait " + x + " seconds.";
+    };
+    time.countDown = function(){
+        var z = this.getSeconds();
+        var a = 0; 
+        if(z == 0){
+            return;
+        } 
+        a = z-1;
+        this.setSeconds(a);
+        $('#timerHouseFull').html(time.toShortString());
+        setTimeout(function(){time.countDown();}, 1000);
+    };
+    time.setSeconds(t);
     setTimeout(function(){time.countDown();}, 1000);
-  };
-  time.setSeconds(t);
-  setTimeout(function(){time.countDown();}, 1000);
 };
 /* Adds one mouse to mice when button clicked. Changes pluralness if you have one mouse. */
 function giveMouse() {
@@ -34,14 +42,14 @@ function giveMouse() {
     if ((mice / 8) < houses) {
         mice += 1;
         if (mice === 1) {
-            document.getElementById("miceOrMouse").innerHTML = "mouse";
-            document.getElementById("mouseNum").innerHTML = mice;
+            $("#miceOrMouse").html("mouse");
+            $("#mouseNum").html(mice);
         } else {
-            document.getElementById("miceOrMouse").innerHTML = "mice";
-            document.getElementById("mouseNum").innerHTML = mice;
+            $("#miceOrMouse").html("mice");
+            $("#mouseNum").html(mice);
         }
     } else {
-        alert("Not enough housing!");
+        alertit("Not enough housing!");
     }
 }
 
@@ -55,11 +63,10 @@ function doBuildHouse() {
     } else {
         houseText = "houses";
     }
-    document.getElementById("housePlural").innerHTML = houseText;
-    document.getElementById("houseNum").innerHTML = houses;
-    setTimeout('document.getElementById("timerHouseFull").innerHTML = ""', 400);
+    $("#housePlural").html(houseText);
+    $("#houseNum").html(houses);
+    setTimeout('$("#timerHouseFull").html("")', 400);
     building = false;
-    //alert("innerHTML = " + document.getElementById("timerHouseFull").innerHTML);
 }
 /* Builds a house when button clicked after 10 seconds. */
 function buildHouse() {
@@ -68,7 +75,7 @@ function buildHouse() {
         displayTime(10);
         setTimeout(doBuildHouse, 10000);
     } else {
-            alert("House still building!");
+        alertit("House still building!");
     }
 }
 /* Displays remaining time */
